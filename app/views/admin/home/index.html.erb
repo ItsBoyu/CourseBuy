@@ -1,0 +1,7 @@
+<h1>This is Admin Home Index</h1>
+
+<% if admin_user_signed_in? %>
+  <%= link_to 'Logout', destroy_admin_user_session_path, method: :delete %>
+<% else %>
+  <%= link_to 'Log In', new_admin_user_session_path %>
+<% end%>
