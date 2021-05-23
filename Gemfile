@@ -37,6 +37,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'aasm', '~> 5.2'
 gem 'devise', '~> 4.8'
+gem 'grape', '~> 1.5', '>= 1.5.3'
+gem 'grape-entity', '~> 0.9.0'
 gem 'money-rails', '~> 1.14'
 gem 'webpacker', '~> 5.4'
 
