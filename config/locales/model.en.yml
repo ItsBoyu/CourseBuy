@@ -37,4 +37,4 @@ en:
           attributes:
             course:
               is_discontinued: is discontinued.
-              is_duplicate_purchase: is duplicate purchase
+              is_duplicated_purchase: is duplicate purchase.
