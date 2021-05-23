@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_secure_token :auth_token
+  has_many :orders
   
   enum role: { member: 0, admin: 1 }
 

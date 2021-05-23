@@ -1,6 +1,7 @@
 class Course < ApplicationRecord
   CURRENCIES = Rails.application.config_for(:settings)['support_currencies']
   belongs_to :category
+  has_many :orders
   
   enum status: { discontinued: 0, released: 1 }
 
