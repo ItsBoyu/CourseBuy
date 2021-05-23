@@ -7,6 +7,7 @@ class Order < ApplicationRecord
   validate :check_duplicate_purchase, on: :create
 
   scope :not_expired, -> { paid.where('expired_at > ?', DateTime.now) }
+  scope :purchased, -> { where(state: %i[paid expired]) }
 
   monetize :amount_cents
   
@@ -53,7 +54,7 @@ class Order < ApplicationRecord
   end
 
   def check_duplicate_purchase
-    return if user.orders.not_expired.include?(course)
+    return unless user.orders.not_expired.pluck(:course_id).include?(course.id)
 
     errors.add(:course, :is_duplicated_purchase)
   end

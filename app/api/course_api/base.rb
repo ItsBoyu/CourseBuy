@@ -4,5 +4,6 @@ module CourseApi
 
     mount Ping
     mount Purchase
+    mount PurchaseRecords
   end
 end
