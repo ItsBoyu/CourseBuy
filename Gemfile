@@ -35,6 +35,7 @@ gem 'jbuilder', '~> 2.5'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
+gem 'aasm', '~> 5.2'
 gem 'devise', '~> 4.8'
 gem 'money-rails', '~> 1.14'
 gem 'webpacker', '~> 5.4'
