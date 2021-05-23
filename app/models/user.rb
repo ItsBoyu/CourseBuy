@@ -7,4 +7,9 @@ class User < ApplicationRecord
   has_secure_token :auth_token
   
   enum role: { member: 0, admin: 1 }
+
+  def renew_token!
+    regenerate_auth_token
+    auth_token
+  end
 end

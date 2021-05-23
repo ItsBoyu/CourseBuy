@@ -3,4 +3,5 @@ class ApiRoot < Grape::API
   format :json
 
   mount CourseApi::Base
+  mount Login
 end
