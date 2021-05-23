@@ -3,6 +3,8 @@ class Order < ApplicationRecord
   belongs_to :course
   before_create :set_amount
 
+  validate :check_course_status
+
   monetize :amount_cents
   
   include AASM
@@ -31,5 +33,11 @@ class Order < ApplicationRecord
     
     self.amount = course.price
     self.amount_currency = course.price_currency
+  end
+
+  def check_course_status
+    return if course&.released?
+
+    errors.add(:course, :is_discontinued)
   end
 end

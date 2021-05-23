@@ -31,3 +31,9 @@ zh-TW:
         expired_at: 使用期限
         user: 用戶
         course: 課程
+    errors:
+      models:
+        order:
+          attributes:
+            course:
+              is_discontinued: 已下架

@@ -31,3 +31,9 @@ en:
         expired_at: Expired Date
         user: Buyer
         course: Course
+    errors:
+      models:
+        order:
+          attributes:
+            course:
+              is_discontinued: is discontinued.
