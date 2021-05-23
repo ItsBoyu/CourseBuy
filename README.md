@@ -1,24 +1,28 @@
-# README
+# CourseBuy
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+##### CourseBuy application is a platform provides user to have chance to study online.
 
-Things you may want to cover:
+### How to build CourseBuy in Development
 
-* Ruby version
+#### Clone CourseBuy Project
+```git clone git@github.com:ItsBoyu/CourseBuy.git```
 
-* System dependencies
+#### Install PostgreSQL
+```brew install postgres```
 
-* Configuration
+#### Setup Project
+```
+$ bundle install or bundle
 
-* Database creation
+$ yarn install --check-files
 
-* Database initialization
+$ rails db:create
 
-* How to run the test suite
+$ rails db:migrate
 
-* Services (job queues, cache servers, search engines, etc.)
+$ rails db:seed
 
-* Deployment instructions
+$ rails server
 
-* ...
+to browser, localhost:3000
+```
