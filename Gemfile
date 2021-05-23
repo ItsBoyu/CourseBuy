@@ -35,6 +35,7 @@ gem 'jbuilder', '~> 2.5'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
+gem 'after_commit_everywhere', '~> 1.0'
 gem 'aasm', '~> 5.2'
 gem 'devise', '~> 4.8'
 gem 'grape', '~> 1.5', '>= 1.5.3'
@@ -45,6 +46,9 @@ gem 'webpacker', '~> 5.4'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'factory_bot_rails', '~> 6.2'
+  gem 'faker', '~> 2.18'
+  gem 'rspec-rails', '~> 4.1.0'
 end
 
 group :development do
@@ -62,6 +66,7 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
+  gem 'database_cleaner-active_record', '~> 2.0', '>= 2.0.1'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

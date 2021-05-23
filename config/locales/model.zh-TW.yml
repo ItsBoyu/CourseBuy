@@ -37,4 +37,4 @@ zh-TW:
           attributes:
             course:
               is_discontinued: 已下架
-              is_duplicated_purchase: 已購買，尚未到期
+              is_duplicate_purchase: 已購買，尚未到期
