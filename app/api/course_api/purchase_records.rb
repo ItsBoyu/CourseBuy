@@ -6,7 +6,7 @@ module CourseApi
     resources :courses do
       desc 'User personal purchase records'
       get :purchased do
-        current_user.orders
+        current_user.purchased_records
       end
     end
   end
