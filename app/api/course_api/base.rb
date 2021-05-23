@@ -3,5 +3,6 @@ module CourseApi
     version 'v1', using: :path
 
     mount Ping
+    mount Purchase
   end
 end

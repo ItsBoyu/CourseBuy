@@ -1,6 +1,9 @@
 class Order < ApplicationRecord
   belongs_to :user
   belongs_to :course
+  before_create :set_amount
+
+  monetize :amount_cents
   
   include AASM
 
@@ -19,5 +22,14 @@ class Order < ApplicationRecord
     event :revoked do
       transitions from: :pending, to: :revoked
     end
+  end
+
+  private
+
+  def set_amount
+    return unless course.present?
+    
+    self.amount = course.price
+    self.amount_currency = course.price_currency
   end
 end
