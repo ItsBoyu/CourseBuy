@@ -3,6 +3,10 @@ module CourseApi
     helpers AuthenticationHelper
     before { authenticate! }
 
+    rescue_from ActiveRecord::RecordNotFound do |e|
+      error!('404 RecordNotFound, 404')
+    end
+
     resources :courses do
       desc 'User can buy the course'
       params do
