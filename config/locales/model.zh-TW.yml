@@ -7,6 +7,9 @@ zh-TW:
       course:
         one: 課程
         ones: 課程
+      order:
+        one: 購買紀錄
+        ones: 購買紀錄
     attributes:
       category:
         name: 名稱
@@ -20,3 +23,11 @@ zh-TW:
         description: 描述
         category: 類型
         category_id: 類型
+      order:
+        state: 訂單狀態
+        amount: 訂單金額
+        amount_currency: 幣別
+        paid_at: 付款時間
+        expired_at: 使用期限
+        user: 用戶
+        course: 課程
