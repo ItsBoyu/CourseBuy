@@ -7,6 +7,9 @@ en:
       course:
         one: Course
         ones: Courses
+      order:
+        one: Order
+        ones: Orders
     attributes:
       category:
         name: Name
@@ -20,3 +23,11 @@ en:
         description: Description
         category: Category
         category_id: Category
+      order:
+        state: State
+        amount: Amount
+        amount_currency: Currency
+        paid_at: Paid Date
+        expired_at: Expired Date
+        user: Buyer
+        course: Course
