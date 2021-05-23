@@ -4,6 +4,19 @@ en:
       category:
         one: Category
         ones: Categories
+      course:
+        one: Course
+        ones: Courses
     attributes:
       category:
         name: Name
+      course:
+        title: Title
+        slug: Slug
+        price: Price
+        price_currency: Currency
+        status: Status
+        period: Period
+        description: Description
+        category: Category
+        category_id: Category

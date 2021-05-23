@@ -1,0 +1,18 @@
+development:
+  support_currencies:
+    - TWD
+    - HKD
+    - JPY
+    - USD
+test:
+  support_currencies:
+    - TWD
+    - HKD
+    - JPY
+    - USD
+production:
+  support_currencies:
+    - TWD
+    - HKD
+    - JPY
+    - USD

@@ -1,9 +1,22 @@
-en:
+zh-TW:
   activerecord:
     models:
       category:
         one: 課程類型
         ones: 課程類型
+      course:
+        one: 課程
+        ones: 課程
     attributes:
       category:
         name: 名稱
+      course:
+        title: 主題
+        slug: 課程 URL
+        price: 價格
+        price_currency: 幣別
+        status: 上架狀態
+        period: 課程效期
+        description: 描述
+        category: 類型
+        category_id: 類型

@@ -1,11 +1,15 @@
 en:
   view:
+    action: Action
     new: New
     edit: Edit
     destroy: Destroy
     submit: Submit
     return: Return
     destroy_confirm: Are you sure?
+  nav:
+    courses_management: Courses Management
+    categories_management: Categories Management
   flash:
     create:
       notice: Create successfully
