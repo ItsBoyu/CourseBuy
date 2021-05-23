@@ -2,7 +2,8 @@ class Course < ApplicationRecord
   CURRENCIES = Rails.application.config_for(:settings)['support_currencies']
   belongs_to :category
   has_many :orders
-  
+  has_many :purchased_records, -> { purchased }, class_name: :Order
+
   enum status: { discontinued: 0, released: 1 }
 
   validates :title, :slug, presence: true, uniqueness: { case_sensitive: false }
