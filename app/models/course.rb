@@ -4,6 +4,10 @@ class Course < ApplicationRecord
   has_many :orders
   has_many :purchased_records, -> { purchased }, class_name: :Order
 
+  scope :filter_by_category , lambda { |category| 
+    includes(:category).where( categories: { name: category } )
+  }
+
   enum status: { discontinued: 0, released: 1 }
 
   validates :title, :slug, presence: true, uniqueness: { case_sensitive: false }
