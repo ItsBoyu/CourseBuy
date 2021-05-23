@@ -5,6 +5,11 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <%= link_to 'Categories', admin_categories_path, class: 'nav-link' %>
+        </li>
+      </ul>
       <ul class="navbar-nav ms-auto">
         <% if admin_user_signed_in? %>
           <span class="navbar-text"><%= current_admin_user.email %></span> |

@@ -1,0 +1,9 @@
+en:
+  activerecord:
+    models:
+      category:
+        one: 課程類型
+        ones: 課程類型
+    attributes:
+      category:
+        name: 名稱

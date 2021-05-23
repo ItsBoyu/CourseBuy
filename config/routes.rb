@@ -6,5 +6,6 @@ Rails.application.routes.draw do
   namespace :admin do
     root to: 'home#index'
     devise_for :users, controllers: { registrations: 'admin/registrations', sessions: 'admin/sessions' }
+    resources :categories
   end
 end
