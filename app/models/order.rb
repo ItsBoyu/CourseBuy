@@ -4,7 +4,7 @@ class Order < ApplicationRecord
   before_create :set_amount
 
   validate :check_course_status
-  validate :check_duplicate_purchase
+  validate :check_duplicate_purchase, on: :create
 
   scope :not_expired, -> { paid.where('expired_at > ?', DateTime.now) }
 
@@ -16,7 +16,7 @@ class Order < ApplicationRecord
     state :pending, initial: true
     state :paid, :expired, :revoked
 
-    event :pay, after_commit: :set_expired_time do
+    event :pay, after_commit: %i[set_expired_time set_paid_time] do
       transitions from: :pending, to: :paid
     end
 
@@ -40,6 +40,10 @@ class Order < ApplicationRecord
 
   def set_expired_time
     update(expired_at: course.period.days.after)
+  end
+
+  def set_paid_time
+    update(paid_at: DateTime.now) 
   end
 
   def check_course_status
