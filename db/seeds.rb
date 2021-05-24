@@ -14,7 +14,7 @@ end
 
 Category.all.each do |category|
   5.times do |t|
-    category.courses.first_or_create(
+    category.courses.create(
       title: "#{category.name}#{t}",
       slug: "#{category.name}#{t}",
       status: Course.statuses.keys.sample,
